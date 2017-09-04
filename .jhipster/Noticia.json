@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "fecha",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "titulo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 256
+        },
+        {
+            "fieldName": "contenido",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 5000
+        }
+    ],
+    "changelogDate": "20170904034114",
+    "entityTableName": "noticia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

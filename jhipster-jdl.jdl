@@ -1,0 +1,13 @@
+entity Noticia {
+    fecha LocalDate required,
+    titulo String required maxlength(256),
+    contenido String required maxlength(5000)
+}
+
+// Set pagination options
+paginate Noticia with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
