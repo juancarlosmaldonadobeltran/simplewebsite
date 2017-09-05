@@ -2,7 +2,7 @@
 
     <div class="modal-header">
         <h4 class="modal-title" id="myUserLabel">
-            Create or edit a User</h4>
+            Crear o editar un Usuario</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
             (click)="clear()">&times;</button>
     </div>
@@ -15,25 +15,25 @@
         </div>
 
         <div class="form-group">
-            <label class="form-control-label">Login</label>
+            <label class="form-control-label">Nombre de Usuario</label>
             <input type="text" class="form-control" name="login" #loginInput="ngModel"
                    [(ngModel)]="user.login" required minlength="1" maxlength="50" pattern="^[_'.@A-Za-z0-9-]*$">
 
             <div *ngIf="loginInput.dirty && loginInput.invalid">
                 <small class="form-text text-danger"
                    *ngIf="loginInput.errors.required">
-                    This field is required.
+                    Esta campo es requerido.
                 </small>
 
                 <small class="form-text text-danger"
                    *ngIf="loginInput.errors.maxlength"
                   >
-                    This field cannot be longer than 50 characters.
+                    Este campo no puede tener mas de 50 caracteres.
                 </small>
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label">First Name</label>
+            <label class="form-control-label">Nombres</label>
             <input type="text" class="form-control" name="firstName" #firstNameInput="ngModel"
                    [(ngModel)]="user.firstName" maxlength="50">
 
@@ -41,12 +41,12 @@
                 <small class="form-text text-danger"
                    *ngIf="firstNameInput.errors.maxlength"
                   >
-                    This field cannot be longer than 50 characters.
+                    Este campo no puede tener mas de 50 caracteres.
                 </small>
             </div>
         </div>
         <div class="form-group">
-            <label>Last Name</label>
+            <label>Apellidos</label>
             <input type="text" class="form-control" name="lastName" #lastNameInput="ngModel"
                    [(ngModel)]="user.lastName" maxlength="50">
 
@@ -54,7 +54,7 @@
                 <small class="form-text text-danger"
                    *ngIf="lastNameInput.errors.maxlength"
                   >
-                    This field cannot be longer than 50 characters.
+                    Este campo no puede tener mas de 50 caracteres.
                 </small>
             </div>
         </div>
@@ -66,36 +66,36 @@
             <div *ngIf="emailInput.dirty && emailInput.invalid">
                 <small class="form-text text-danger"
                    *ngIf="emailInput.errors.required">
-                    This field is required.
+                    Esta campo es requerido.
                 </small>
 
                 <small class="form-text text-danger"
                    *ngIf="emailInput.errors.maxlength"
                   >
-                    This field cannot be longer than 100 characters.
+                    Este campo no puede tener mas de 100 caracteres.
                 </small>
 
                 <small class="form-text text-danger"
                    *ngIf="emailInput.errors.minlength"
                   >
-                    This field is required to be at least 5 characters.
+                    Este campo debe tener al menos 5 caracteres.
                 </small>
 
                 <small class="form-text text-danger"
                    *ngIf="emailInput.errors.email">
-                    Your email is invalid.
+                    Su correo no es válido
                  </small>
             </div>
         </div>
         <div class="form-check">
             <label class="form-check-label" for="activated">
                 <input class="form-check-input" [disabled]="user.id === null" type="checkbox" id="activated" name="activated" [(ngModel)]="user.activated">
-                <span>Activated</span>
+                <span>Activado</span>
             </label>
         </div>
 
         <div class="form-group">
-            <label>Profiles</label>
+            <label>Perfiles</label>
             <select class="form-control" multiple name="authority" [(ngModel)]="user.authorities">
                 <option *ngFor="let authority of authorities" [value]="authority">{{authority}}</option>
             </select>
@@ -104,10 +104,10 @@
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
             <span class="fa fa-ban"></span>&nbsp;<span
-           >Cancel</span>
+           >Cancelar</span>
         </button>
         <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
-            <span class="fa fa-floppy-o"></span>&nbsp;<span>Save</span>
+            <span class="fa fa-floppy-o"></span>&nbsp;<span>Guardar</span>
         </button>
     </div>
 </form>

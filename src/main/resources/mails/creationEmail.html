@@ -7,19 +7,19 @@
     </head>
     <body>
         <p th:text="#{email.activation.greeting(${user.login})}">
-            Dear
+            Hola
         </p>
         <p th:text="#{email.creation.text1}">
-            Your JHipster account has been created, please click on the URL below to access it:
+            Su cuenta de ASOPENESSA ha sido creada, por favor vaya a la siguiente URL para ingresar:
         </p>
         <p>
           <a th:href="@{|${baseUrl}/#/reset/finish?key=${user.resetKey}|}"
-             th:text="@{|${baseUrl}/#/reset/finish?key=${user.resetKey}|}">Login link</a>
+             th:text="@{|${baseUrl}/#/reset/finish?key=${user.resetKey}|}">Link de ingreso</a>
         </p>
         <p>
-            <span th:text="#{email.activation.text2}">Regards, </span>
+            <span th:text="#{email.activation.text2}">Cordialmente, </span>
             <br/>
-            <em th:text="#{email.signature}">JHipster.</em>
+            <em th:text="#{email.signature}">ASOPENESSA.</em>
         </p>
     </body>
 </html>

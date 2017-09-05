@@ -1,7 +1,7 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
 
     <div class="modal-header">
-        <h4 class="modal-title" id="myNoticiaLabel">Create or edit a Noticia</h4>
+        <h4 class="modal-title" id="myNoticiaLabel">Crear o Editar una Noticia</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 (click)="clear()">&times;</button>
     </div>
@@ -24,22 +24,22 @@
             <div [hidden]="!(editForm.controls.fecha?.dirty && editForm.controls.fecha?.invalid)">
                 <small class="form-text text-danger"
                    [hidden]="!editForm.controls.fecha?.errors?.required">
-                   This field is required.
+                   Este campo es requerido.
                 </small>
             </div>
         </div>
         <div class="form-group">
-            <label class="form-control-label" for="field_titulo">Titulo</label>
+            <label class="form-control-label" for="field_titulo">Título</label>
             <input type="text" class="form-control" name="titulo" id="field_titulo"
                 [(ngModel)]="noticia.titulo" required maxlength="256" />
             <div [hidden]="!(editForm.controls.titulo?.dirty && editForm.controls.titulo?.invalid)">
                 <small class="form-text text-danger"
                    [hidden]="!editForm.controls.titulo?.errors?.required">
-                   This field is required.
+                    Este campo es requerido.
                 </small>
                 <small class="form-text text-danger"
                    [hidden]="!editForm.controls.titulo?.errors?.maxlength">
-                   This field cannot be longer than 256 characters.
+                   Este campo debe tener máximo 256 caracteres.
                 </small>
             </div>
         </div>
@@ -50,11 +50,11 @@
             <div [hidden]="!(editForm.controls.contenido?.dirty && editForm.controls.contenido?.invalid)">
                 <small class="form-text text-danger"
                    [hidden]="!editForm.controls.contenido?.errors?.required">
-                   This field is required.
+                    Este campo es requerido.
                 </small>
                 <small class="form-text text-danger"
                    [hidden]="!editForm.controls.contenido?.errors?.maxlength">
-                   This field cannot be longer than 5000 characters.
+                    Este campo debe tener máximo 5000 caracteres.
                 </small>
             </div>
         </div>
@@ -62,10 +62,10 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
-            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancelar</span>
         </button>
         <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
-            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+            <span class="fa fa-save"></span>&nbsp;<span>Guardar</span>
         </button>
     </div>
 </form>

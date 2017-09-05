@@ -1,31 +1,31 @@
 <div *ngIf="user">
     <h2>
-        <span>User</span> [<b>{{user.login}}</b>]
+        <span>Usuario</span> [<b>{{user.login}}</b>]
     </h2>
     <dl class="row-md jh-entity-details">
-        <dt><span>Login</span></dt>
+        <dt><span>Nombre de usuario</span></dt>
         <dd>
             <span>{{user.login}}</span>
             <span class="badge badge-danger" *ngIf="!user.activated"
-                 >Deactivated</span>
+                 >Desactivado</span>
             <span class="badge badge-success" *ngIf="user.activated"
-                 >Activated</span>
+                 >Activado</span>
         </dd>
-        <dt><span>First Name</span></dt>
+        <dt><span>Nombres</span></dt>
         <dd>{{user.firstName}}</dd>
-        <dt><span>Last Name</span></dt>
+        <dt><span>Apellidos</span></dt>
         <dd>{{user.lastName}}</dd>
-        <dt><span>Email</span></dt>
+        <dt><span>Correo</span></dt>
         <dd>{{user.email}}</dd>
-        <dt><span>Created By</span></dt>
+        <dt><span>Creado por</span></dt>
         <dd>{{user.createdBy}}</dd>
-        <dt><span>Created Date</span></dt>
+        <dt><span>Fecha de creación</span></dt>
         <dd>{{user.createdDate | date:'dd/MM/yy HH:mm' }}</dd>
-        <dt><span>Last Modified By</span></dt>
+        <dt><span>Modificado por</span></dt>
         <dd>{{user.lastModifiedBy}}</dd>
-        <dt><span>Last Modified Date</span></dt>
+        <dt><span>fecha de última modificación</span></dt>
         <dd>{{user.lastModifiedDate | date:'dd/MM/yy HH:mm'}}</dd>
-        <dt><span>Profiles</span></dt>
+        <dt><span>Perfiles</span></dt>
         <dd>
             <ul class="list-unstyled">
                 <li *ngFor="let authority of user.authorities">
@@ -37,6 +37,6 @@
     <button type="submit"
             routerLink="/user-management"
             class="btn btn-info">
-        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Regresar</span>
     </button>
 </div>
